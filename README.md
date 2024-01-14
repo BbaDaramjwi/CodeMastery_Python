@@ -6,7 +6,7 @@
 This is where I document and store my Python coding exercises
 <br> as part of my language learning journey.
 
-<br> In this repository, you'll find a collection of Java exercises and projects
+<br> In this repository, you'll find a collection of Python exercises and projects
 <br> that I've worked on to improve my coding skills. 
 <br>
 <br> The ideas for the respective tasks originate from the courses I have attended,
