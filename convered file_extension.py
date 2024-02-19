@@ -1,13 +1,14 @@
-"""
-    Editor-FileExtension
+""" convered file_extension
+
     This script changes the file extension of a file.
     All files in the folder with the corresponding ending will be changed,
-    this allows multiple files to be renamed at the same time. 
-    Choose your mode.
+    this allows multiple files to be "convered" at the same time. 
+    Choose your mode 1 or 2 and hit enter.
 """
 
 
 import os
+
 
 current_directory = os.path.dirname(os.path.realpath(__file__ ))
 
@@ -23,6 +24,7 @@ def txt_to_md():
             target = os.path.join(folder_path, filename[:-4] + '.md')
             os.rename(source, target)
 
+
 def md_to_txt():
     for filename in os.listdir(folder_path):
         if filename.endswith('.md') and filename != "ReadMe.txt":
@@ -31,23 +33,33 @@ def md_to_txt():
             os.rename(source, target)
 
 
-userInput = int(input(
+user_input = (input(
     f"\n{formatting}"
     f"\n Welcome Master,"
-    f"\n Please select one of the following options below"
+    f"\n Please select one of the following options below, hit enter"
     f"\n and I will change the file extension for you.\n"
-    f"\n 1 | - txt -> md"
-    f"\n 2 | -  md -> txt"
-    f"\n "       ))
+    f"\n 1 | txt ---> md"
+    f"\n 2 | md  ---> txt"
+    f"\n \n >> "        ))
 
-if userInput == 1:
-    run = txt_to_md()
-    print(f"txt_to_md - DONE {formatting}")
-            
-if userInput == 2:
-    run = md_to_txt()
-    print("md_to_txt - DONE")
-        
+
+try:
+    user_input = int(user_input)
     
-
-
+    if user_input == 1:
+        run = txt_to_md()
+        print(f" >> txt ---> md is DONE")
+        print(formatting)
+        
+    elif user_input == 2:
+        run = md_to_txt()
+        print(" >> md ---> txt is DONE")
+        print(formatting)
+    
+    else:
+        print(f"\n !!! Your input does not match the required input !!!")
+        print(formatting)
+        
+except ValueError:
+    print(f"\n !!! Your input does not match the required input !!!")
+    print(formatting)

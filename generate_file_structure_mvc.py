@@ -1,9 +1,8 @@
-"""
-    MVC - Model View Controller
-    The MVC principle is an architectural pattern in software development
-    that is used to organise the structure of applications.
+""" generate_file_structure_mvc
     
-    This script creates a corresponding folder structure :)
+    The MVC (Model View Controller) principle is an architectural pattern
+    in software development that is used to organise the structure of applications.
+    This script creates a corresponding folder structure.
 """
 
 
